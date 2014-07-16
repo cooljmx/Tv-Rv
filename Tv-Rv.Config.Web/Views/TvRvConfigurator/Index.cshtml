@@ -1,0 +1,27 @@
+﻿@using Tv_Rv.Config.Web.Models
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TvRvConfiguratorModel
+
+<div class="row-fluid">
+    @if (Model.MenuItems != null)
+    {
+        {
+            Html.RenderAction("Index", "ConfigNavigator", new { model = Model, selectedMenuItem = Model.SelectedMenuItem });
+        }
+    }
+    @if (Model.SelectedMenuItem != null)
+    {
+        if (Model.SelectedMenuItem == "Config")
+        {
+            Html.RenderAction("Index", "Config");
+
+        }
+        else if (Model.SelectedMenuItem == "TunerConfig")
+        {
+            Html.RenderAction("Index", "TunerConfig");
+            
+        }
+    }
+</div>

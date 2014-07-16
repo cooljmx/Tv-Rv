@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ТВ-РВ конфигуратор</title>
+        <link href="~/Content/bootstrap2/bootstrap.css" type="text/css" rel="stylesheet" />
+        <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />
+        <script src="~/Scripts/jquery-1.9.0.min.js" type="text/javascript"></script>
+        <script src="~/Scripts/bootstrap2/bootstrap.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="mainHeader" class="row">
+            <div id="caption" class="span12">ТВ-РВ конфигуратор</div>
+        </div>
+        <div id="contentRow" class="row">
+            <div id="mainMenu" class="span3">
+                @{ Html.RenderAction("Index", "Nav"); }
+            </div>
+            <div id="mainContent" class="span12">
+                @RenderBody()
+            </div>
+        </div>
+
+    </body>
+</html>

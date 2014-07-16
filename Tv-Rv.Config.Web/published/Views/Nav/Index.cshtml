@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Tv_Rv.Config.Web.Models.NavModel>
+<div>
+    <ul class="nav nav-pills nav-stacked" id="mainMenuList">
+        @foreach (var item in Model)
+        {
+            <li>
+                @Html.RouteLink(item.ItemName, 
+                    new { selectedMenuItem = item.ItemName, controller = item.ControllerName, action = item.ActionName }, 
+                    new {@class = item.ItemName == ViewBag.SelectedMenuItem ? "selected" : null})
+            </li>
+        }
+    </ul>
+</div>

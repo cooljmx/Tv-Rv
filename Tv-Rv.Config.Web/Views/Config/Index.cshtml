@@ -1,0 +1,16 @@
+﻿@model Tv_Rv.Config.TvRvConfig
+<div class="span2">
+    @using (Html.BeginForm())
+    {
+        <div class="" tabindex="0" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="">Основные параметры</div>
+            <div class="">
+                @Html.EditorForModel()
+            </div>
+            <div class="">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+                <a href="@Url.Action("Index", "TvRvConfigurator")" class="btn">Отмена</a>
+            </div>
+        </div>
+    }
+</div>

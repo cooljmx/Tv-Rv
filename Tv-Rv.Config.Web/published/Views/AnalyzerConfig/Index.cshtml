@@ -1,0 +1,9 @@
+﻿@model Tv_Rv.Config.AnalyzerConfig
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <div>
+        <input type="submit" value="Сохранить" class="btn btn-primary" />
+        <a href="@Url.Action("Index", "Home")" class="btn">Отмена</a>
+    </div>
+}
