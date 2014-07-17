@@ -4,13 +4,22 @@ using System.Xml.Serialization;
 
 namespace Tv_Rv.Config
 {
+    public enum ServerStyles
+    {
+        Classic,
+        Java,
+        WebAPI
+    }
+
     public class TvRvConfig
     {
-        [DisplayName("Адрес удаленного сервера")]
-        public string RemoteHost { get; set; }
-        public bool OldStyleServer { get; set; }
+        [DisplayName("Адрес сервера мониторинга")]
+        public string RemoteServer { get; set; }
+        public ServerStyles ServerStyle { get; set; }
+        [DisplayName("Идентификатор ПАК")]
+        [ReadOnly(true)]
         public int IdPak { get; set; }
-        public long MaxLogFileLength { get; set; }
+        public long MaxLogFileSize { get; set; }
         public TunerConfig TunerConfig { get; set; }
         public AnalyzerConfig AnalyzerConfig { get; set; }
 
@@ -20,6 +29,11 @@ namespace Tv_Rv.Config
                 TunerConfig = new TunerConfig();
             if (AnalyzerConfig == null)
                 AnalyzerConfig = new AnalyzerConfig();
+
+            RemoteServer = @"http://localhost:5454";
+            ServerStyle = ServerStyles.Classic;
+            IdPak = 0;
+            MaxLogFileSize = 0;
         }
 
         public void SaveToFile(string fileName)
@@ -42,10 +56,10 @@ namespace Tv_Rv.Config
 
         public void AssignValues(TvRvConfig source)
         {
-            RemoteHost = source.RemoteHost;
-            OldStyleServer = source.OldStyleServer;
+            RemoteServer = source.RemoteServer;
+            ServerStyle = source.ServerStyle;
             IdPak = source.IdPak;
-            MaxLogFileLength = source.MaxLogFileLength;
+            MaxLogFileSize = source.MaxLogFileSize;
         }
     }
 }
