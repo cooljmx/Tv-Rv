@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.IO;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
 
 namespace Tv_Rv.Config
 {
@@ -8,7 +9,7 @@ namespace Tv_Rv.Config
     {
         Classic,
         Java,
-        WebAPI
+        WebApi
     }
 
     public class TvRvConfig
@@ -17,7 +18,7 @@ namespace Tv_Rv.Config
         public string RemoteServer { get; set; }
         public ServerStyles ServerStyle { get; set; }
         [DisplayName("Идентификатор ПАК")]
-        [ReadOnly(true)]
+        [Editable(false)]
         public int IdPak { get; set; }
         public long MaxLogFileSize { get; set; }
         public TunerConfig TunerConfig { get; set; }
@@ -38,6 +39,7 @@ namespace Tv_Rv.Config
 
         public void SaveToFile(string fileName)
         {
+            Directory.CreateDirectory(Path.GetDirectoryName(fileName));
             using (var stream = new FileStream(fileName, FileMode.Create, FileAccess.Write))
             {
                 var serializer = new XmlSerializer(typeof(TvRvConfig));

@@ -1,0 +1,15 @@
+﻿@using Tv_Rv.Config.Web.Models
+@model TvRvConfiguratorModel
+
+<div>
+    <ul class="nav nav-pills nav-stacked span2" id="configMenuList">
+        @foreach (var item in Model.MenuItems)
+        {
+            <li>
+                @Html.RouteLink(item.ItemName,
+                     new { selectedMenuItem = item.ControllerName, controller = "TvRvConfigurator", action = "Index" }, 
+                    new { @class = Model.SelectedMenuItem == item.ControllerName ? "selected" : null })
+            </li>
+        }
+    </ul>
+</div>

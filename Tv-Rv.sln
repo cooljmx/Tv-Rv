@@ -5,11 +5,7 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tv-Rv.Config", "Tv-Rv.Config\Tv-Rv.Config.csproj", "{02ADBB62-578F-4EC9-A855-77BD5C529372}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tv-Rv.Config.Web", "Tv-Rv.Config.Web\Tv-Rv.Config.Web.csproj", "{34AFDAF2-E865-43DA-B77A-5AA12290F3F8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{2B4677C4-FB14-40E0-B8DE-0E23EACD9B97}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiView", "MultiView\MultiView.csproj", "{9BD37172-EDC5-478D-AC76-D545829B1B52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tv-Rv.Config.Web", "Tv-Rv.Config.Web\Tv-Rv.Config.Web.csproj", "{CD7D2A20-94AC-4488-AAFF-BEC2964323E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +17,10 @@ Global
 		{02ADBB62-578F-4EC9-A855-77BD5C529372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02ADBB62-578F-4EC9-A855-77BD5C529372}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02ADBB62-578F-4EC9-A855-77BD5C529372}.Release|Any CPU.Build.0 = Release|Any CPU
-		{34AFDAF2-E865-43DA-B77A-5AA12290F3F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34AFDAF2-E865-43DA-B77A-5AA12290F3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34AFDAF2-E865-43DA-B77A-5AA12290F3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34AFDAF2-E865-43DA-B77A-5AA12290F3F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B4677C4-FB14-40E0-B8DE-0E23EACD9B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B4677C4-FB14-40E0-B8DE-0E23EACD9B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B4677C4-FB14-40E0-B8DE-0E23EACD9B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B4677C4-FB14-40E0-B8DE-0E23EACD9B97}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BD37172-EDC5-478D-AC76-D545829B1B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BD37172-EDC5-478D-AC76-D545829B1B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BD37172-EDC5-478D-AC76-D545829B1B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BD37172-EDC5-478D-AC76-D545829B1B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD7D2A20-94AC-4488-AAFF-BEC2964323E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD7D2A20-94AC-4488-AAFF-BEC2964323E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD7D2A20-94AC-4488-AAFF-BEC2964323E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD7D2A20-94AC-4488-AAFF-BEC2964323E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

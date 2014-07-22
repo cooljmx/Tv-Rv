@@ -9,28 +9,9 @@ namespace Tv_Rv.Config.Web.Controllers
         [HttpGet]
         public ActionResult Index(string selectedMenuItem = null)
         {
-            var model = new TvRvConfiguratorModel {SelectedMenuItem = selectedMenuItem};
+            var model = Singleton<TvRvConfiguratorModel>.Instance;
+            model.SelectedMenuItem = selectedMenuItem;
             return View(model);
-        }
-
-        [HttpPost]
-        public ActionResult Index(TvRvConfig data)
-        {
-            var model = Singleton<ConfigModel>.Instance;
-            model.Config.AssignValues(data);
-            model.Save();
-
-            return RedirectToAction("Index", "TvRvConfigurator");
-        }
-
-        [HttpPost]
-        public ActionResult Index(TunerConfig data)
-        {
-            var model = Singleton<ConfigModel>.Instance;
-            model.Config.TunerConfig.AssignValues(data);
-            model.Save();
-
-            return RedirectToAction("Index", "Home");
         }
 	}
 }

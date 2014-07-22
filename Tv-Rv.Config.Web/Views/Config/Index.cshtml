@@ -1,10 +1,11 @@
 ﻿@model Tv_Rv.Config.TvRvConfig
 <div class="span2">
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Index", "Config"))
     {
         <div class="" tabindex="0" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="">Основные параметры</div>
+            <div class=""><b>Основные параметры</b></div>
             <div class="">
+                @Html.ValidationSummary(true)
                 @Html.EditorForModel()
             </div>
             <div class="">

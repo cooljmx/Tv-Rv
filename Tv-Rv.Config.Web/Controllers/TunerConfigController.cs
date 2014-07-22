@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using Common;
-using Tv_Rv.Config.Web.Infrastructure;
 using Tv_Rv.Config.Web.Models;
 
 namespace Tv_Rv.Config.Web.Controllers
@@ -10,8 +9,17 @@ namespace Tv_Rv.Config.Web.Controllers
         [HttpGet]
         public PartialViewResult Index()
         {
-            var model = Singleton<ConfigModel>.Instance;
+            var model = Singleton<TvRvConfiguratorModel>.Instance;
             return PartialView(model.Config.TunerConfig);
+        }
+
+        [HttpPost]
+        public ActionResult Index(TunerConfig model)
+        {
+            var data = Singleton<TvRvConfiguratorModel>.Instance;
+            data.Config.TunerConfig.AssignValues(model);
+            data.Save();
+            return RedirectToAction("Index", "TvRvConfigurator");
         }
     }
 }

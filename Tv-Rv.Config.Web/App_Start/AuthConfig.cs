@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Web.WebPages.OAuth;
 using Tv_Rv.Config.Web.Models;
 
 namespace Tv_Rv.Config.Web

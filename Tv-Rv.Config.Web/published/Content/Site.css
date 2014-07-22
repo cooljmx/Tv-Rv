@@ -8,11 +8,14 @@ body { height: 100%;}
 
 #mainHeader { background-color: #333;color: white;font-size: 2em;padding: .5em .5em .5em .5em;}
 #contentRow { height: 100%;}
-#mainMenu { float: left;height: 100%;}
+#configMenu { float: left;height: 100%;}
 
 #gridDatabase { margin: .1em .1em .1em .1em;}
 #gridDatabase th { background-color: #666;color: WindowText;}
 
-#mainMenuList a.selected { background: #666;color: white;}
-#mainMenuList a.hover { background: #ccc;}
-#mainMenuList a.selected:hover { background: #666;}
+#configMenuList a.selected { background: #666;color: white;}
+#configMenuList a.hover { background: #ccc;}
+#configMenuList a.selected:hover { background: #666;}
+
+#caption { color: white;text-decoration: none;}
+#loginDiv a { color: white;text-decoration: none;font-size: .5em;}
